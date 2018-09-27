@@ -48,7 +48,7 @@ client.on('message', (receivedMessage) => {
 			region = "eune"
 			regionCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "lan" + "\\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "laan" + "\\b")) != -1) {
 			region = "lan"
 			regionCount += 1
 		}

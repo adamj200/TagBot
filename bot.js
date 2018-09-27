@@ -7,7 +7,7 @@ client.on('message', (receivedMessage) => {
 	
 	console.log(receivedMessage.content)
 	
-	if (receivedMessage.channel.id != 268510171125252096) {
+	if (receivedMessage.channel.id != 368816534744858637) {
 		return
 	}
 	
@@ -241,4 +241,4 @@ client.on('message', (receivedMessage) => {
 			
 })
 
-client.login(auth)
+client.login(auth.token)

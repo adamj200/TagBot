@@ -1,0 +1,31 @@
+{
+  "name": "TagBot",
+  "version": "1",
+  "description": "",
+  "main": "bot.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "",
+	"build": ""
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "keywords": [
+    "",
+	""
+  ],
+  "author": "Adamj200",
+  "license": "",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "docdash": "",
+    "jsdoc": ""
+  }
+}

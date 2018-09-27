@@ -36,7 +36,7 @@ client.on('message', (receivedMessage) => {
 			region = "na"
 			regionCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "krtest" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "korea" + "\\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "kr" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "korea" + "\\b")) != -1) {
 			region = "kr"
 			regionCount += 1
 		}
@@ -48,7 +48,7 @@ client.on('message', (receivedMessage) => {
 			region = "eune"
 			regionCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "laan" + "\\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "lan" + "\\b")) != -1) {
 			region = "lan"
 			regionCount += 1
 		}

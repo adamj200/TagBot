@@ -88,7 +88,7 @@ client.on('message', (receivedMessage) => {
 			skin = "sanguine"
 			skinCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "commaaaando" + "\\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "commando" + "\\b")) != -1) {
 			skin = "commando"
 			skinCount += 1
 		}

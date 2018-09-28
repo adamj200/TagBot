@@ -100,7 +100,7 @@ client.on('message', (receivedMessage) => {
 			skin = "warring kingdoms"
 			skinCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "dread" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "knight" + "\\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "dread" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "knight" + "\\b")) != -1  || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "dreadknight" + "\\b")) != -1) {
 			skin = "dreadknight"
 			skinCount += 1
 		}
@@ -108,7 +108,7 @@ client.on('message', (receivedMessage) => {
 			skin = "noble chroma"
 			skinCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "god" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "king" + "\\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "god" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "king" + "\\b")) != -1  || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "godking" + "\\b")) != -1) {
 			skin = "god king"
 			skinCount += 1
 		}

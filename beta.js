@@ -6,7 +6,7 @@ if (receivedMessage.channel.id == xxxxxxxxxxxxxxx) {
       if (userMessage.substring(0, 3) == "add") {
         var regionAccount = userMessage.substring(4);
           if (totalWords.replace(/ .*/,'').toLowerCase() == "euw") {
-            region = "euw
+            region = "euw"
           }
           else if (totalWords.replace(/ .*/,'').toLowerCase() == "na") {
             region = "na"

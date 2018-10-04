@@ -5,7 +5,7 @@ var auth = require('./auth.json');
 
 client.on('message', (receivedMessage) => {
 	
-	console.log(receivedMessage.content)
+	//console.log(receivedMessage.content)
 	
 	if (receivedMessage.channel.id != 268510171125252096) {
 		return

@@ -22,9 +22,9 @@ if (receivedMessage.channel.id == xxxxxxxxxxxxxxx) {
           }
       }
       
-      let points = JSON.parse(fs.readFileSync("./points.json", "utf8"))
+      let accounts = JSON.parse(fs.readFileSync("./points.json", "utf8"))
       
-      fs.writeFile("./points.json", JSON.stringify(points), (err) => {
+      fs.writeFile("./accounts.json", JSON.stringify(points), (err) => {
     if (err) console.error(err)
   })
         

@@ -76,11 +76,11 @@ client.on('message', (receivedMessage) => {
 			skin = "rugged"
 			skinCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "steel" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "legion" + "\\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "steel" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "legion" + "\\b")) != -1  || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "steellegion" + "\\b")) != -1) {
 			skin = "steel legion"
 			skinCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "rogue" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "admiral" + "\\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "rogue" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "admiral" + "\\b")) != -1  || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "rogueadmiral" + "\\b")) != -1) {
 			skin = "rogue admiral"
 			skinCount += 1
 		}
@@ -92,11 +92,11 @@ client.on('message', (receivedMessage) => {
 			skin = "commando"
 			skinCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "desert" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "trooper" + "\\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "desert" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "trooper" + "\\b")) != -1  || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "deserttrooper" + "\\b")) != -1) {
 			skin = "desert trooper"
 			skinCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "warring" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "kingdom" + "\\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "warring" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "kingdom" + "\\b")) != -1  || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "warringkingdom" + "\\b")) != -1) {
 			skin = "warring kingdoms"
 			skinCount += 1
 		}

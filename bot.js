@@ -3,6 +3,10 @@ const client = new Discord.Client()
 
 var auth = require('./auth.json');
 
+client.on("error", (err) => {
+  console.error(`An error occurred. The error was: ${err}.`)
+});
+
 client.on('message', (receivedMessage) => {
 	
 	//console.log(receivedMessage.content)

@@ -4,10 +4,10 @@ const client = new Discord.Client()
 var auth = require('./auth.json');
 
 client.on("error", (err) => {
-	console.error(`An error occurred. The error was: ${err}.`)
-});
+	console.error("An error occurred. The error was: ${err}.")
+})
 
-client.on('message', (receivedMessage) => {
+client.on("message", (receivedMessage) => {
 	
 	if (receivedMessage.author == client.user) {
         	return
@@ -22,7 +22,7 @@ client.on('message', (receivedMessage) => {
 	}
 	
 	
-    if (receivedMessage.content.includes(client.user.toString())) {
+	if (receivedMessage.content.includes(client.user.toString())) {
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "admin" + "\\b")) != -1) {
 			receivedMessage.channel.send(receivedMessage.author + " Don't tempt me.")
 			return
@@ -33,8 +33,8 @@ client.on('message', (receivedMessage) => {
 	var regionCount = 0
 	var skin
 	var skinCount = 0
-	
-    if (receivedMessage.content.includes(client.user.toString())) {
+
+	if (receivedMessage.content.includes(client.user.toString())) {
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "euw" + "\\b")) != -1) {
 			region = "EUW"
 			regionCount += 1
@@ -119,7 +119,7 @@ client.on('message', (receivedMessage) => {
 			skin = "God King"
 			skinCount += 1
 		}
-    }
+	}
 	
 	if (regionCount > 1 && skinCount > 1) {
 		receivedMessage.channel.send(receivedMessage.author + " You may only have 1 region tag and 1 skin tag.")
@@ -175,8 +175,7 @@ client.on('message', (receivedMessage) => {
 		else {
 			receivedMessage.channel.send(receivedMessage.author + " Unrecognised skin/region tag.")
 		}
-	}
-			
+	}			
 })
 
 client.login(auth.token)

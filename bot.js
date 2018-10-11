@@ -11,6 +11,10 @@ client.on('message', (receivedMessage) => {
 	
 	//console.log(receivedMessage.content)
 	
+	if (receivedMessage.channel.id == 368816534744858637) {
+		receivedMessage.channel.send(receivedMessage.content.toLowerCase().replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())
+	}
+	
 	if (receivedMessage.channel.id != 268510171125252096) {
 		return
 	}
@@ -144,7 +148,7 @@ client.on('message', (receivedMessage) => {
 		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "BR").id)
 		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAS").id).then(() => {
 			setTimeout(function() {
-				addRolesRegion()
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region.toUpperCase()).id)
 			}, 500);
 		})
 	}
@@ -163,42 +167,6 @@ client.on('message', (receivedMessage) => {
 				addRolesSkin()
 			}, 500);
 		})
-	}
-	
-	function addRolesRegion() {
-		if (region == "euw") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region.toUpperCase()).id)
-		}
-		else if (region == "na") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "NA").id)
-		}
-		else if (region == "kr") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "KR").id)
-		}
-		else if (region == "oce") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "OCE").id)
-		}
-		else if (region == "eune") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "EUNE").id)
-		}
-		else if (region == "lan") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "LAN").id)
-		}
-		else if (region == "pt") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "PT").id)
-		}
-		else if (region == "jpn") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "JPN").id)
-		}
-		else if (region == "tr") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "TR").id)
-		}
-		else if (region == "br") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "BR").id)
-		}
-		else if (region == "las") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "LAS").id)
-		}
 	}
 	
 	function addRolesSkin() {

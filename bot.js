@@ -14,7 +14,7 @@ client.on('message', (receivedMessage) => {
 	}
 	
 	if (receivedMessage.channel.id == 368816534744858637) {
-		receivedMessage.channel.send(receivedMessage.content.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});)
+		receivedMessage.channel.send(receivedMessage.content.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()}))
 	}
 	
 	if (receivedMessage.channel.id != 268510171125252096) {

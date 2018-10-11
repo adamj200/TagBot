@@ -13,9 +13,9 @@ client.on('message', (receivedMessage) => {
         	return
 	}
 	
-	if (receivedMessage.channel.id == 368816534744858637) {
-		receivedMessage.channel.send(receivedMessage.content.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()}))
-	}
+	//if (receivedMessage.channel.id == 368816534744858637) {
+		//receivedMessage.channel.send()
+	//}
 	
 	if (receivedMessage.channel.id != 268510171125252096) {
 		return
@@ -163,42 +163,9 @@ client.on('message', (receivedMessage) => {
 		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
 		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id).then(() => {
 			setTimeout(function() {
-				addRolesSkin()
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === skin.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()})).id)
 			}, 500);
 		})
-	}
-	
-	function addRolesSkin() {
-		if (skin == "rugged") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
-		}
-		else if (skin == "steel legion") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Steel Legion").id)
-		}
-		else if (skin == "rogue admiral") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Rogue Admiral").id)
-		}
-		else if (skin == "sanguine") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Sanguine").id)
-		}
-		else if (skin == "commando") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Commando").id)
-		}
-		else if (skin == "desert trooper") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Desert Trooper").id)
-		}
-		else if (skin == "warring kingdoms") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Warring Kingdoms").id)
-		}
-		else if (skin == "dreadknight") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Dreadknight").id)
-		}
-		else if (skin == "noble chroma") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
-		}
-		else if (skin == "god king") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
-		}
 	}
 	
 	if (receivedMessage.content.includes(client.user.toString())) {

@@ -9,8 +9,6 @@ client.on("error", (err) => {
 
 client.on('message', (receivedMessage) => {
 	
-	//console.log(receivedMessage.content)
-	
 	if (receivedMessage.author == client.user) {
         	return
 	}

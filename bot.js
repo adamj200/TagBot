@@ -205,7 +205,7 @@ client.on('message', (receivedMessage) => {
 		if (regionCount == 1 || skinCount == 1) {
 			receivedMessage.channel.send(receivedMessage.author + " Tagged")
 		}
-		else if (regionCount == 0 || skinCount == 0) {
+		else {
 			receivedMessage.channel.send(receivedMessage.author + " Unrecognised skin/region tag.")
 		}
 	}

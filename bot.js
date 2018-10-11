@@ -167,7 +167,7 @@ client.on('message', (receivedMessage) => {
 	
 	function addRolesRegion() {
 		if (region == "euw") {
-			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
+			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region.toUpperCase()).id)
 		}
 		else if (region == "na") {
 			receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "NA").id)

@@ -4,12 +4,16 @@ const client = new Discord.Client()
 var auth = require('./auth.json');
 
 client.on("error", (err) => {
-  console.error(`An error occurred. The error was: ${err}.`)
+	console.error(`An error occurred. The error was: ${err}.`)
 });
 
 client.on('message', (receivedMessage) => {
 	
 	//console.log(receivedMessage.content)
+	
+	if (receivedMessage.author == client.user) {
+        	return
+	}
 	
 	if (receivedMessage.channel.id == 368816534744858637) {
 		receivedMessage.channel.send(receivedMessage.content.toLowerCase().replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())
@@ -19,9 +23,6 @@ client.on('message', (receivedMessage) => {
 		return
 	}
 	
-	if (receivedMessage.author == client.user) {
-        return
-    }
 	
     if (receivedMessage.content.includes(client.user.toString())) {
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "admin" + "\\b")) != -1) {

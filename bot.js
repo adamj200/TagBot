@@ -17,7 +17,7 @@ client.on("message", (receivedMessage) => {
 	
 	if (receivedMessage.channel.id == 368816534744858637) {
 		receivedMessage.channel.send(receivedMessage.content)
-		//receivedMessage.channel.send(receivedMessage.author)
+		receivedMessage.channel.send(receivedMessage.author)
 		return
 	}
 	

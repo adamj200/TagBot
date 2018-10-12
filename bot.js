@@ -4,8 +4,8 @@ const client = new Discord.Client()
 var auth = require('./auth.json');
 
 client.on("error", (err) => {
-	console.error(`An error occurred. The error was: ${err}.`)
-});
+	console.error("An error occurred. The error was: " + err)
+})
 
 client.on("message", (receivedMessage) => {
 	
@@ -14,8 +14,9 @@ client.on("message", (receivedMessage) => {
 	}
 	
 	if (receivedMessage.channel.id == 368816534744858637) {
-		//receivedMessage.channel.send(receivedMessage.member)
+		receivedMessage.channel.send(receivedMessage.member)
 		receivedMessage.channel.send(receivedMessage.author)
+		return
 	}
 	
 	if (receivedMessage.channel.id != 268510171125252096) {

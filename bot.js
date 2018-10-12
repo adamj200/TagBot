@@ -13,9 +13,10 @@ client.on("message", (receivedMessage) => {
         	return
 	}
 	
-	//if (receivedMessage.channel.id == 368816534744858637) {
-		//receivedMessage.channel.send()
-	//}
+	if (receivedMessage.channel.id == 368816534744858637) {
+		receivedMessage.channel.send(receivedMessage.member)
+		receivedMessage.channel.send(receivedMessage.author)
+	}
 	
 	if (receivedMessage.channel.id != 268510171125252096) {
 		return

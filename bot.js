@@ -13,7 +13,7 @@ client.on("message", (receivedMessage) => {
         	return
 	}
 	
-	console.log(receivedMessage.content)
+	console.log(receivedMessage.author + ": " + receivedMessage.content)
 	
 	if (receivedMessage.channel.id != 268510171125252096) {
 		return

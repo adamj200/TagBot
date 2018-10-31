@@ -15,7 +15,7 @@ client.on("message", (receivedMessage) => {
 	
 	console.log(receivedMessage.author + ": " + receivedMessage.content)
 	
-	if (receivedMessage.author == 198893129149972480) {
+	if (receivedMessage.author == "198893129149972480") {
 		console.log("Adam")
 	}
 	

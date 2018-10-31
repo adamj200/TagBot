@@ -16,7 +16,10 @@ client.on("message", (receivedMessage) => {
 	console.log(receivedMessage.author + ": " + receivedMessage.content)
 	
 	if (receivedMessage.author == "<@198893129149972480>") {
-		console.log("Adam")
+		if (receivedMessage.content == "!bc")
+		{
+			receivedMessage.channel.send("The Black Cleaver is a garbage item on Garen.")
+		}
 	}
 	
 	if (receivedMessage.channel.id != 268510171125252096) {

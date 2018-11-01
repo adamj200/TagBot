@@ -18,7 +18,7 @@ client.on("message", (receivedMessage) => {
 	if (receivedMessage.author == "<@198893129149972480>") {
 		if (receivedMessage.content == "!bc")
 		{
-			receivedMessage.channel.send("The Black Cleaver is a garbage item on Garen.  Build Triforce instead.")
+			receivedMessage.channel.send("Black Cleaver is a garbage item on Garen.  Build Triforce instead.")
 		}
 		else if (receivedMessage.content == "!league")
 		{

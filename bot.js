@@ -20,6 +20,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("The Black Cleaver is a garbage item on Garen.  Build Triforce instead.")
 		}
+		else if (receivedMessage.content == "!league")
+		{
+			receivedMessage.channel.send("This game sucks!")
+		}
 	}
 	
 	if (receivedMessage.channel.id != 268510171125252096) {

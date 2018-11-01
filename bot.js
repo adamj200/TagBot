@@ -24,6 +24,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("This game sucks!")
 		}
+		else if (receivedMessage.content == "!garen")
+		{
+			receivedMessage.channel.send("Garen is actually the best champion in the game and hard counters all others.")
+		}
 	}
 	
 	if (receivedMessage.channel.id != 268510171125252096) {

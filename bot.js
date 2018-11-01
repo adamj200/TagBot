@@ -32,6 +32,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("Predator is Garens best keystone (don’t tell Marine) -Heptastrike")
 		}
+		else if (receivedMessage.content == "!celestial")
+		{
+			receivedMessage.channel.send("RIP 1k HP level 1 Garen <3")
+		}
 	}
 	
 	if (receivedMessage.channel.id != 268510171125252096) {

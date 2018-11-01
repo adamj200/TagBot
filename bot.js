@@ -15,7 +15,7 @@ client.on("message", (receivedMessage) => {
 	
 	console.log(receivedMessage.author + ": " + receivedMessage.content)
 	
-	if (receivedMessage.author == "<@198893129149972480>") {
+	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@348142087805468693>") {
 		if (receivedMessage.content == "!bc")
 		{
 			receivedMessage.channel.send("Black Cleaver is a garbage item on Garen.  Build Triforce instead.")
@@ -27,6 +27,10 @@ client.on("message", (receivedMessage) => {
 		else if (receivedMessage.content == "!garen")
 		{
 			receivedMessage.channel.send("Garen is actually the best champion in the game and hard counters all others.")
+		}
+		else if (receivedMessage.content == "!predator")
+		{
+			receivedMessage.channel.send("Predator is Garens best keystone (don’t tell Marine) -Heptastrike")
 		}
 	}
 	

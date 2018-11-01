@@ -42,13 +42,6 @@ client.on("message", (receivedMessage) => {
 		return
 	}
 	
-	if (receivedMessage.content.includes(client.user.toString())) {
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "admin" + "\\b")) != -1) {
-			receivedMessage.channel.send(receivedMessage.author + " Don't tempt me.")
-			return
-		}
-	}
-	
 	var region
 	var regionCount = 0
 	var skin

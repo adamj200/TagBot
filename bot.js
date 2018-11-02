@@ -20,7 +20,7 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("Black Cleaver is a garbage item on Garen.  Build Triforce instead.")
 		}
-		else if (receivedMessage.content == "!league")
+		else if (receivedMessage.content == "!leage")
 		{
 			receivedMessage.channel.send("This game sucks!")
 		}

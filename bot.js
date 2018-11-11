@@ -60,7 +60,7 @@ client.on("message", (receivedMessage) => {
 			region = "KR"
 			regionCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "oce" + "\\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "oce" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "oceania" + "\\b")) != -1) {
 			region = "OCE"
 			regionCount += 1
 		}

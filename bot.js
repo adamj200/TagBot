@@ -43,7 +43,6 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("test")
 		}
-		return
 	}
 	
 	if (receivedMessage.channel.id != 268510171125252096) {

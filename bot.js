@@ -38,7 +38,7 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!test")
 		{
-			receivedMessage.channel.send(receivedMessage.channel)
+			console.log(receivedMessage.channel)
 		}
 	}
 	

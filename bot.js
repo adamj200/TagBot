@@ -22,7 +22,7 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!league")
 		{
-			receivedMessage.channel.send("This game sucks!")
+			receivedMessage.channel.send("This game test!")
 		}
 		else if (receivedMessage.content == "!garen")
 		{

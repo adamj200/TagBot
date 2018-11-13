@@ -38,7 +38,7 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!test")
 		{
-			console.log(receivedMessage.author + ": " + receivedMessage.channel)
+			console.log(receivedMessage.author + ": " + receivedMessage.content)
 		}
 	}
 	

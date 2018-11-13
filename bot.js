@@ -42,7 +42,7 @@ client.on("message", (receivedMessage) => {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "rank" + "\\b")) != -1) {
 			{
-				receivedMessage.channel.send(receivedMessage.channel)
+				receivedMessage.channel.send("receivedMessage.channel")
 			}
 		}
 		return

@@ -36,6 +36,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("RIP 1k HP level 1 Garen <3")
 		}
+		else if (receivedMessage.content == "!test")
+		{
+			receivedMessage.channel.send(receivedMessage.channel)
+		}
 	}
 	
 	if (receivedMessage.channel.id == 511868913483776012) {

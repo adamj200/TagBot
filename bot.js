@@ -40,7 +40,7 @@ client.on("message", (receivedMessage) => {
 	
 	if (receivedMessage.channel.id != 511868913483776012) {
 		if (receivedMessage.content.includes(client.user.toString())) {
-			if (receivedMessage.content == "!rank")
+			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "rank" + "\\b")) != -1) {
 			{
 				receivedMessage.channel.send(receivedMessage.channel)
 			}

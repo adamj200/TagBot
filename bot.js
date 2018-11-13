@@ -36,7 +36,7 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("RIP 1k HP level 1 Garen <3")
 		}
-		else if (receivedMessage.content == "!test")
+		else if (receivedMessage.content == "!meme")
 		{
 			console.log(receivedMessage.author + ": " + receivedMessage.content)
 		}

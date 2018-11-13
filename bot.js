@@ -38,6 +38,14 @@ client.on("message", (receivedMessage) => {
 		}
 	}
 	
+	if (receivedMessage.channel.id == 511868913483776012) {
+		if (receivedMessage.content == "!rank")
+		{
+			receivedMessage.channel.send(receivedMessage.channel)
+		}
+		return
+	}
+	
 	if (receivedMessage.channel.id != 268510171125252096) {
 		return
 	}

@@ -38,7 +38,7 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!meme")
 		{
-			console.log(receivedMessage.author + ": " + receivedMessage.content)
+			receivedMessage.channel.send("meme")
 		}
 	}
 	

@@ -39,10 +39,9 @@ client.on("message", (receivedMessage) => {
 	}
 	
 	if (receivedMessage.channel.id == 511868913483776012) {
-		if (receivedMessage.content.includes(client.user.toString())) {
-
-				receivedMessage.channel.send("Test")
-			
+		if (receivedMessage.content == "test")
+		{
+			receivedMessage.channel.send("test")
 		}
 		return
 	}

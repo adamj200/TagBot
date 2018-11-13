@@ -22,7 +22,7 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!league")
 		{
-			receivedMessage.channel.send("This game test!")
+			receivedMessage.channel.send("This game sucks!")
 		}
 		else if (receivedMessage.content == "!garen")
 		{
@@ -35,10 +35,6 @@ client.on("message", (receivedMessage) => {
 		else if (receivedMessage.content == "!celestial")
 		{
 			receivedMessage.channel.send("RIP 1k HP level 1 Garen <3")
-		}
-		else if (receivedMessage.content == "!meme")
-		{
-			receivedMessage.channel.send("meme")
 		}
 	}
 	

@@ -41,7 +41,7 @@ client.on("message", (receivedMessage) => {
 	if (receivedMessage.channel.id == 511868913483776012) {
 		if (receivedMessage.content == "!rank")
 		{
-			client.channels.get("511910642995953664").send("<@244234418007441408>")
+			client.channels.get("511910642995953664").send("<@244234418007441408>" + " profile " + receivedMessage.author)
 		}
 		return
 	}

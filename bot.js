@@ -41,7 +41,7 @@ client.on("message", (receivedMessage) => {
 	if (receivedMessage.author == "<@198893129149972480>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			var userMessage = receivedMessage.content.toLowerCase().replace(client.user.toString(),"")
-			if (userMessage.content.toLowerCase().search(new RegExp("\\b" + "!demaciate" + "\\b")) != -1) {
+			if (userMessage.toLowerCase().search(new RegExp("\\b" + "!demaciate" + "\\b")) != -1) {
 				receivedMessage.channel.send(receivedMessage.author + " Nuked")
 			}
 		}

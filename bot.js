@@ -43,8 +43,8 @@ client.on("message", (receivedMessage) => {
 			var userMessage = receivedMessage.content.toLowerCase().replace(client.user.toString(),"")
 			if (userMessage.toLowerCase().search(new RegExp("\\b" + "demaciate" + "\\b")) != -1) {
 				var nukeUser = userMessage.substring(11)
-				//clean(receivedMessage.channel)
-				console.log(nukeUser)
+				clean(receivedMessage.channel, nukeUser)
+				//console.log(nukeUser)
 			}
 		}
 	}
@@ -211,14 +211,14 @@ client.on("message", (receivedMessage) => {
 	}			
 })
 
-function clean(channel, limit = 100) {
+function clean(channel, user, limit = 100) {
   return channel.fetchMessages({limit}).then(async collected => {
-    let mine = collected.filter(m => m.author.id == '439205512425504771'); // this gets only your messages
+    let mine = collected.filter(m => m.author == user)
     if (mine.size > 0) {
-      await channel.bulkDelete(mine, true);
-      clean(channel);
-    } else channel.send("The channel is now empty!").delete(5000); // this message is deleted after 5 s
-  });
+      await channel.bulkDelete(mine, true)
+      clean(channel, user)
+    } else channel.send("The channel is now empty!")
+  })
 }
 
 client.login(auth.token)

@@ -41,9 +41,9 @@ client.on("message", (receivedMessage) => {
 	if (receivedMessage.author == "<@198893129149972480>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			var userMessage = receivedMessage.content.toLowerCase().replace(client.user.toString(),"")
-			console.log(userMessage)
 			if (userMessage.toLowerCase().search(new RegExp("\\b" + "demaciate" + "\\b")) != -1) {
 				var nukeUser = userMessage.substring(11)
+				clean(receivedMessage.channel)
 				receivedMessage.channel.send(nukeUser)
 			}
 		}
@@ -210,5 +210,15 @@ client.on("message", (receivedMessage) => {
 		}
 	}			
 })
+
+function clean(channel, limit = 100) {
+  return channel.fetchMessages({limit}).then(async collected => {
+    let mine = collected.filter(m => m.author.id == '439205512425504771'); // this gets only your messages
+    if (mine.size > 0) {
+      await channel.bulkDelete(mine, true);
+      clean(channel);
+    } else channel.send("The channel is now empty!").delete(5000); // this message is deleted after 5 s
+  });
+}
 
 client.login(auth.token)

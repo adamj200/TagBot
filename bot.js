@@ -43,6 +43,7 @@ client.on("message", (receivedMessage) => {
 			var userMessage = receivedMessage.content.toLowerCase().replace(client.user.toString(),"")
 			console.log(userMessage)
 			if (userMessage.toLowerCase().search(new RegExp("\\b" + "!demaciate" + "\\b")) != -1) {
+				console.log(receivedMessage.author + " Nuked")
 				receivedMessage.channel.send(receivedMessage.author + " Nuked")
 			}
 		}

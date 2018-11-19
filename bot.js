@@ -217,7 +217,7 @@ function clean(channel, user, limit = 100) {
     if (mine.size > 0) {
       await channel.bulkDelete(mine, true)
       clean(channel, user)
-    } else channel.send("The channel is now empty!")
+    } else channel.send(user + " has been slain.")
   })
 }
 

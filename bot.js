@@ -43,7 +43,7 @@ client.on("message", (receivedMessage) => {
 			var userMessage = receivedMessage.content.toLowerCase().replace(client.user.toString(),"")
 			console.log(userMessage)
 			if (userMessage.toLowerCase().search(new RegExp("\\b" + "demaciate" + "\\b")) != -1) {
-				var nukeUser = userMessage.substring(9)
+				var nukeUser = userMessage.substring(11)
 				receivedMessage.channel.send(nukeUser)
 			}
 		}

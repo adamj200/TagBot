@@ -36,6 +36,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("RIP 1k HP level 1 Garen <3")
 		}
+		else if (receivedMessage.content == "!celerity")
+		{
+			receivedMessage.channel.send("Celerity is a piece of useless trash.")
+		}
 	}
 	
 	if (receivedMessage.author == "<@198893129149972480>") {

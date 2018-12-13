@@ -38,7 +38,11 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!celerity")
 		{
-			receivedMessage.channel.send("Celerity is a piece of useless trash.")
+			receivedMessage.channel.send("Celerity is a useless piece of trash.")
+		}
+		else if (receivedMessage.content == "!illaoi")
+		{
+			receivedMessage.channel.send("Death by snu snu.")
 		}
 	}
 	

@@ -211,10 +211,10 @@ client.on("message", (receivedMessage) => {
 	
 	if (receivedMessage.content.includes(client.user.toString())) {
 		if (regionCount == 1 || skinCount == 1) {
-			receivedMessage.channel.send(receivedMessage.author + " Tagged")
+			receivedMessage.react(":white_check_mark:")
 		}
 		else {
-			receivedMessage.channel.send(receivedMessage.author + " Unrecognised skin/region tag.")
+			receivedMessage.react(":question:")
 		}
 	}			
 })

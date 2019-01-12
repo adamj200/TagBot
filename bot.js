@@ -211,10 +211,10 @@ client.on("message", (receivedMessage) => {
 	
 	if (receivedMessage.content.includes(client.user.toString())) {
 		if (regionCount == 1 || skinCount == 1) {
-			receivedMessage.channel.send(receivedMessage.author + " Tagged")
+			receivedMessage.react('✅')
 		}
 		else {
-			receivedMessage.react('✅')
+			receivedMessage.react('❓')
 		}
 	}			
 })

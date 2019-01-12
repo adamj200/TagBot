@@ -214,7 +214,7 @@ client.on("message", (receivedMessage) => {
 			receivedMessage.channel.send(receivedMessage.author + " Tagged")
 		}
 		else {
-			receivedMessage.react(message.guild.emojis.get(<":question:6e054ab8981d3f1ce8debfd1235d3ea3">))
+			receivedMessage.react(receivedMessage.guild.emojis.get(<":question:6e054ab8981d3f1ce8debfd1235d3ea3">))
 		}
 	}			
 })

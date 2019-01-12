@@ -211,7 +211,7 @@ client.on("message", (receivedMessage) => {
 	
 	if (receivedMessage.content.includes(client.user.toString())) {
 		if (regionCount == 1 || skinCount == 1) {
-			receivedMessage.react(":white_check_mark:")
+			receivedMessage.channel.send(receivedMessage.author + " Tagged")
 		}
 		else {
 			receivedMessage.react(":question:")

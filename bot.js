@@ -214,7 +214,7 @@ client.on("message", (receivedMessage) => {
 			receivedMessage.channel.send(receivedMessage.author + " Tagged")
 		}
 		else {
-			receivedMessage.react(':thinking:')
+			receivedMessage.react('✅')
 		}
 	}			
 })

@@ -176,37 +176,41 @@ client.on("message", (receivedMessage) => {
 	}
 	
 	if (regionCount == 1) {
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "EUW").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "NA").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "KR").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "OCE").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "EUNE").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAN").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "PT").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "JPN").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "TR").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "BR").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAS").id).then(() => {
-			setTimeout(function() {
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
-			}, 500);
-		})
+		if (receivedMessage.member != null) {
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "EUW").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "NA").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "KR").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "OCE").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "EUNE").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAN").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "PT").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "JPN").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "TR").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "BR").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAS").id).then(() => {
+				setTimeout(function() {
+					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
+				}, 500);
+			})
+		}
 	}
 	if (skinCount == 1) {
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Steel Legion").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Rogue Admiral").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Sanguine").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Commando").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Desert Trooper").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Warring Kingdoms").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Dreadknight").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
-		receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id).then(() => {
-			setTimeout(function() {
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === skin).id)
-			}, 500);
-		})
+		if (receivedMessage.member != null) {
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Steel Legion").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Rogue Admiral").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Sanguine").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Commando").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Desert Trooper").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Warring Kingdoms").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Dreadknight").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id).then(() => {
+				setTimeout(function() {
+					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === skin).id)
+				}, 500);
+			})
+		}
 	}
 	
 	if (receivedMessage.content.includes(client.user.toString())) {

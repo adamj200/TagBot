@@ -13,7 +13,7 @@ client.on("message", (receivedMessage) => {
         	return
 	}
 	
-	console.log(receivedMessage.author + ": " + receivedMessage.content)
+	console.log(receivedMessage.member + ": " + receivedMessage.content)
 	
 	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@249633375407702017>") {
 		if (receivedMessage.content == "!bc")

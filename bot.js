@@ -218,7 +218,7 @@ client.on("message", (receivedMessage) => {
 			receivedMessage.react('✅')
 		}
 		else {
-			receivedMessage.react('❓')
+			receivedMessage.react('🤔')
 		}
 	}			
 })

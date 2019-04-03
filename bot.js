@@ -15,7 +15,7 @@ client.on("message", (receivedMessage) => {
 	
 	console.log(receivedMessage.author + ": " + receivedMessage.content)
 	
-	if (receivedMessage.author == "<@198893129149972480>") {
+	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@348142087805468693>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "daddy" + "\\b")) != -1) {
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)

@@ -28,6 +28,8 @@ client.on("message", (receivedMessage) => {
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Dreadknight").id)
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
+				receivedMessage.react('✅')
+				return
 			}
 		}
 	}

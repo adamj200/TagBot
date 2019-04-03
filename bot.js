@@ -15,6 +15,23 @@ client.on("message", (receivedMessage) => {
 	
 	console.log(receivedMessage.author + ": " + receivedMessage.content)
 	
+	if (receivedMessage.author == "<@198893129149972480>") {
+		if (receivedMessage.content.includes(client.user.toString())) {
+			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "daddy" + "\\b")) != -1) {
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Steel Legion").id)
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Rogue Admiral").id)
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Sanguine").id)
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Commando").id)
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Desert Trooper").id)
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Warring Kingdoms").id)
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Dreadknight").id)
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
+			}
+		}
+	}
+	
 	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@508767713397833748>") {
 		if (receivedMessage.content == "!bc")
 		{
@@ -74,23 +91,6 @@ client.on("message", (receivedMessage) => {
 	var regionCount = 0
 	var skin
 	var skinCount = 0
-	
-	if (receivedMessage.author == "<@198893129149972480>") {
-		if (receivedMessage.content.includes(client.user.toString())) {
-			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "daddy" + "\\b")) != -1) {
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Steel Legion").id)
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Rogue Admiral").id)
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Sanguine").id)
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Commando").id)
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Desert Trooper").id)
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Warring Kingdoms").id)
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Dreadknight").id)
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
-			}
-		}
-	}
 
 	if (receivedMessage.content.includes(client.user.toString())) {
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "euw" + "\\b")) != -1) {

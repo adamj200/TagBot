@@ -63,6 +63,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("Death by snu snu.")
 		}
+		else if (receivedMessage.content == "!memerune")
+		{
+			receivedMessage.channel.send("Only low elo Garen scrubs use Predator.")
+		}
 	}
 	
 	if (receivedMessage.author == "<@198893129149972480>") {

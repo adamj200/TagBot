@@ -13,7 +13,7 @@ client.on("message", (receivedMessage) => {
         	return
 	}
 	
-	console.log(receivedMessage.author + ": " + receivedMessage.content)
+	//console.log(receivedMessage.author + ": " + receivedMessage.content)
 	
 	console.log(receivedMessage.member)
 	

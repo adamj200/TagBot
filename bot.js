@@ -13,9 +13,9 @@ client.on("message", (receivedMessage) => {
         	return
 	}
 	
-	//console.log(receivedMessage.author + ": " + receivedMessage.content)
+	console.log(receivedMessage.author + ": " + receivedMessage.content)
 	
-	console.log(receivedMessage.member)
+	console.log(receivedMessage.member.nickname)
 	
 	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@182727259054931969>" || receivedMessage.author == "<@243931167823233026>") {
 		if (receivedMessage.content.includes(client.user.toString())) {

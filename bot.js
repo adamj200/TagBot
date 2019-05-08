@@ -67,6 +67,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("Only low elo Garen scrubs use Predator.")
 		}
+		else if (receivedMessage.content == "!recurve")
+		{
+			receivedMessage.channel.send("Black Cleaver into Recurve Bow is currently Garens best build.  Everything is inferior to this item combo.")
+		}
 	}
 	
 	if (receivedMessage.author == "<@198893129149972480>") {

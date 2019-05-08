@@ -15,7 +15,7 @@ client.on("message", (receivedMessage) => {
 	
 	console.log(receivedMessage.author.username + ": " + receivedMessage.content)
 	
-	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@182727259054931969>" || receivedMessage.author == "<@243931167823233026>") {
+	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@277492874306781184>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@182727259054931969>" || receivedMessage.author == "<@243931167823233026>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "daddy" + "\\b")) != -1) {
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
@@ -70,6 +70,10 @@ client.on("message", (receivedMessage) => {
 		else if (receivedMessage.content == "!recurve")
 		{
 			receivedMessage.channel.send("Black Cleaver into Recurve Bow is currently Garens best build.  Everything is inferior to this item combo.")
+		}
+		else if (receivedMessage.content == "!dariusmatchup")
+		{
+			receivedMessage.channel.send("Garen vs Darius is 100% a skill matchup. Only in Bronze is Garen slightly favoured.")
 		}
 	}
 	

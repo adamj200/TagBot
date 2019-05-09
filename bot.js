@@ -87,7 +87,14 @@ client.on("message", (receivedMessage) => {
 					var accountName = ""
 					for (var i = 3; i < words.length; i++)
 					{
-						accountName = accountName + words[i]
+						if (accountName == "")
+						{
+							accountName = accountName + words[i]
+						}
+						else
+						{
+							accountName = accountName + " " + words[i]
+						}
 					}
 					
 					

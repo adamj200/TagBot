@@ -84,7 +84,15 @@ client.on("message", (receivedMessage) => {
 			{
 				if (words[2].toLowerCase() == "na" || words[2].toLowerCase() == "euw")
 				{
-					console.log(receivedMessage.author.username + ": " + words.length)
+					var accountName
+					for (var i = 3; i <= words.length; i++)
+					{
+						accountName = accountName + words[i]
+					}
+					
+					
+					
+					console.log(receivedMessage.author.username + ": " + accountName)
 				}
 			}
 		}

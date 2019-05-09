@@ -80,9 +80,12 @@ client.on("message", (receivedMessage) => {
 	if (receivedMessage.author == "<@198893129149972480>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			var words = receivedMessage.content.split(" ")
-			if (words[1].toLowerCase() == "na" || words[1].toLowerCase() == "euw")
+			if (words[1].toLowerCase() == "club")
 			{
-				console.log(receivedMessage.author.username + ": " + words[2])	
+				if (words[2].toLowerCase() == "na" || words[2].toLowerCase() == "euw")
+				{
+					console.log(receivedMessage.author.username + ": " + words[3])
+				}
 			}
 		}
 	}

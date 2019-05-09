@@ -84,7 +84,7 @@ client.on("message", (receivedMessage) => {
 			{
 				if (words[2].toLowerCase() == "na" || words[2].toLowerCase() == "euw")
 				{
-					console.log(receivedMessage.author.username + ": " + words[3])
+					console.log(receivedMessage.author.username + ": " + words.length)
 				}
 			}
 		}

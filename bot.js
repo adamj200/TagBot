@@ -85,7 +85,7 @@ client.on("message", (receivedMessage) => {
 				if (words[2].toLowerCase() == "na" || words[2].toLowerCase() == "euw")
 				{
 					var accountName
-					for (var i = 3; i <= words.length; i++)
+					for (var i = 2; i < words.length; i++)
 					{
 						accountName = accountName + words[i]
 					}

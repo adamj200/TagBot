@@ -79,7 +79,8 @@ client.on("message", (receivedMessage) => {
 	
 	if (receivedMessage.author == "<@198893129149972480>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
-			console.log(receivedMessage.author.username + ": " + receivedMessage.content)
+			var words = receivedMessage.content.split(" ")
+			console.log(receivedMessage.author.username + ": " + words[0])
 		}
 	}
 	

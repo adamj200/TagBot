@@ -13,7 +13,7 @@ client.on("message", (receivedMessage) => {
         	return
 	}
 	
-	console.log(receivedMessage.author.username + ": " + receivedMessage.content)
+	//console.log(receivedMessage.author.username + ": " + receivedMessage.content)
 	
 	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@277492874306781184>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@182727259054931969>" || receivedMessage.author == "<@243931167823233026>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
@@ -74,6 +74,12 @@ client.on("message", (receivedMessage) => {
 		else if (receivedMessage.content == "!dariusmatchup")
 		{
 			receivedMessage.channel.send("Garen vs Darius is 100% a skill matchup. Only in Bronze is Garen slightly favoured.")
+		}
+	}
+	
+	if (receivedMessage.author == "<@198893129149972480>") {
+		if (receivedMessage.content.includes(client.user.toString())) {
+			console.log(receivedMessage.author.username + ": " + receivedMessage.content)
 		}
 	}
 	

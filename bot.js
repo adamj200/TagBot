@@ -69,18 +69,21 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!recurve")
 		{
-			receivedMessage.channel.send("Black Cleaver into Recurve Bow is currently Garens best build.  Everything is inferior to this item combo.")
+			receivedMessage.channel.send("Black Cleaver into Recurve Bow is currently Garens best build.  Everything else is inferior to this item combo.")
 		}
 		else if (receivedMessage.content == "!dariusmatchup")
 		{
-			receivedMessage.channel.send("Garen vs Darius is 100% a skill matchup. Only in Bronze is Garen slightly favoured.")
+			receivedMessage.channel.send("Garen vs Darius is 100% a skill matchup. Only in Bronze is Darius slightly favoured.")
 		}
 	}
 	
 	if (receivedMessage.author == "<@198893129149972480>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			var words = receivedMessage.content.split(" ")
-			console.log(receivedMessage.author.username + ": " + words[1])
+			if (words[1].toLowerCase()) == "na" || words[1].toLowerCase()) == "euw")
+			{
+				console.log(receivedMessage.author.username + ": " + words[2])	
+			}
 		}
 	}
 	

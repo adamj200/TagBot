@@ -100,7 +100,14 @@ client.on("message", (receivedMessage) => {
 						}
 					}
 				}
-				console.log(receivedMessage.author + ": " + accountName)
+				
+				var fs = require('fs');
+				fs.writeFile("test.txt", accountName, function(err) {
+				})
+				
+				
+				
+				console.log(receivedMessage.author.username + ": " + accountName)
 			}
 		}
 	}

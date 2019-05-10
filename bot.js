@@ -101,17 +101,13 @@ client.on("message", (receivedMessage) => {
 					}
 				}
 				  var data = {
-      name: "cliff",
-      age: "34",
-      name: "ted",
-      age: "42",
       name: "bob",
       age: "12"
     }
 
 var jsonData = JSON.stringify(data);
 				var fs = require('fs');
-				fs.appendFile("test.txt", jsonData + "\r\n", function(err) {
+				fs.appendFile("test.json", jsonData + "\r\n", function(err) {
 				})
 				
 

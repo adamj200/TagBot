@@ -81,7 +81,7 @@ client.on("message", (receivedMessage) => {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			var words = receivedMessage.content.split(" ")
 			if (words[1] != null && words[2] != null && words[3] != null)
-				{
+			{
 				if (words[1].toLowerCase() == "club")
 				{
 					if (words[2].toLowerCase() == "na" || words[2].toLowerCase() == "euw")
@@ -100,8 +100,8 @@ client.on("message", (receivedMessage) => {
 						}
 					}
 				}
+				console.log(receivedMessage.author + ": " + accountName)
 			}
-			console.log(receivedMessage.author.username + ": " + accountName)
 		}
 	}
 	

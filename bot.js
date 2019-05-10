@@ -111,7 +111,7 @@ client.on("message", (receivedMessage) => {
 
 var jsonData = JSON.stringify(data);
 				var fs = require('fs');
-				fs.appendFile("test.txt", data + "\r\n", function(err) {
+				fs.appendFile("test.txt", jsonData + "\r\n", function(err) {
 				})
 				
 

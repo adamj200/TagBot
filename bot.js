@@ -102,7 +102,7 @@ client.on("message", (receivedMessage) => {
 				}
 				
 				var fs = require('fs');
-				fs.appendFile("test.txt", "\n" + accountName, function(err) {
+				fs.appendFile("test.txt", "\r\n" + accountName, function(err) {
 				})
 				
 				

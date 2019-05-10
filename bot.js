@@ -80,28 +80,28 @@ client.on("message", (receivedMessage) => {
 	if (receivedMessage.author == "<@198893129149972480>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			var words = receivedMessage.content.split(" ")
-			if (words[1].toLowerCase() == "club")
-			{
-				if (words[2].toLowerCase() == "na" || words[2].toLowerCase() == "euw")
+			if (words[3] !== null)
 				{
-					var accountName = ""
-					for (var i = 3; i < words.length; i++)
+				if (words[1].toLowerCase() == "club")
+				{
+					if (words[2].toLowerCase() == "na" || words[2].toLowerCase() == "euw")
 					{
-						if (accountName == "")
+						var accountName = ""
+						for (var i = 3; i < words.length; i++)
 						{
-							accountName = accountName + words[i]
-						}
-						else
-						{
-							accountName = accountName + " " + words[i]
+							if (accountName == "")
+							{
+								accountName = accountName + words[i]
+							}
+							else
+							{
+								accountName = accountName + " " + words[i]
+							}
 						}
 					}
-					
-					
-					
-					console.log(receivedMessage.author.username + ": " + accountName)
 				}
 			}
+			console.log(receivedMessage.author.username + ": " + accountName)
 		}
 	}
 	

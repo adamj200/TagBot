@@ -100,8 +100,18 @@ client.on("message", (receivedMessage) => {
 						}
 					}
 				}
+				  var data = {
+      name: "cliff",
+      age: "34",
+      name: "ted",
+      age: "42",
+      name: "bob",
+      age: "12"
+    }
+
+var jsonData = JSON.stringify(data);
 				var fs = require('fs');
-				fs.appendFile("test.txt", words[2] + " " + receivedMessage.author.username + " " + accountName + "\r\n", function(err) {
+				fs.appendFile("test.txt", data + "\r\n", function(err) {
 				})
 				
 

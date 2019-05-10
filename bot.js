@@ -100,14 +100,11 @@ client.on("message", (receivedMessage) => {
 						}
 					}
 				}
-				
 				var fs = require('fs');
-				fs.appendFile("test.txt", accountName + "\r\n", function(err) {
+				fs.appendFile("test.txt", words[2] + " " + receivedMessage.author.username + " " + accountName + "\r\n", function(err) {
 				})
 				
-				
-				
-				console.log(receivedMessage.author.username + ": " + accountName)
+
 			}
 		}
 	}

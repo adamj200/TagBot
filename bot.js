@@ -77,7 +77,7 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!300iq")
 		{
-			receivedMessage.channel.send("Recurve bow -> Guinsoos + Conq. New op Garen build.")
+			receivedMessage.channel.send("Recurve bow -> Guinsoos + Conq. 300iq build. -FABFAN")
 		}
 	}
 	

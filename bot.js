@@ -75,6 +75,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("Garen vs Darius is 100% a skill matchup. Only in Bronze is Darius slightly favoured.")
 		}
+		else if (receivedMessage.content == "!300iq")
+		{
+			receivedMessage.channel.send("Recurve bow -> Guinsoos + Conq. New op Garen build.")
+		}
 	}
 	
 	if (receivedMessage.author == "<@198893129149972480>") {

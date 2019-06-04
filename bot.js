@@ -193,6 +193,10 @@ var jsonData = JSON.stringify(data);
 			region = "LAS"
 			regionCount += 1
 		}
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "sea" + "\\b")) != -1) {
+			region = "SEA"
+			regionCount += 1
+		}
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "rugged" + "\\b")) != -1) {
 			skin = "Rugged"
 			skinCount += 1
@@ -260,7 +264,8 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "JPN").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "TR").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "BR").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAS").id).then(() => {
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAS").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "SEA").id).then(() => {
 				setTimeout(function() {
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
 				}, 500);

@@ -59,10 +59,6 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("Celerity is a useless piece of trash.")
 		}
-		else if (receivedMessage.content == "!illaoi")
-		{
-			receivedMessage.channel.send("Death by snu snu.")
-		}
 		else if (receivedMessage.content == "!memerune")
 		{
 			receivedMessage.channel.send("Only low elo Garen scrubs use Predator.")
@@ -78,6 +74,10 @@ client.on("message", (receivedMessage) => {
 		else if (receivedMessage.content == "!300iq")
 		{
 			receivedMessage.channel.send("Recurve bow -> Guinsoos + Conq. 300iq build. -FABFAN")
+		}
+		else if (receivedMessage.content == "!biscuit")
+		{
+			receivedMessage.channel.send("Let's go! Biscuit pop again. Oh my goodness, the biscuits man, the fucking biscuits. -FSat")
 		}
 	}
 	

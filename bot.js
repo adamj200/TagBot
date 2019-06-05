@@ -34,7 +34,7 @@ client.on("message", (receivedMessage) => {
 		}
 	}
 	
-	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@508767713397833748>" || receivedMessage.author == "<@277492874306781184>") {
+	if (receivedMessage.author == "<@114082374123388935>" || receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@508767713397833748>" || receivedMessage.author == "<@277492874306781184>") {
 		if (receivedMessage.content == "!bc")
 		{
 			receivedMessage.channel.send("Black Cleaver is a garbage item on Garen.  Build Triforce instead.")

@@ -15,7 +15,7 @@ client.on("message", (receivedMessage) => {
 	
 	//console.log(receivedMessage.author.username + ": " + receivedMessage.content)
 	
-	if (receivedMessage.author == "<@210798714585874442>" || receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@277492874306781184>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@182727259054931969>" || receivedMessage.author == "<@243931167823233026>") {
+	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@277492874306781184>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@182727259054931969>" || receivedMessage.author == "<@243931167823233026>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "daddy" + "\\b")) != -1) {
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
@@ -34,7 +34,7 @@ client.on("message", (receivedMessage) => {
 		}
 	}
 	
-	if (receivedMessage.author == "<@243931167823233026>" || receivedMessage.author == "<@114082374123388935>" || receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@508767713397833748>" || receivedMessage.author == "<@277492874306781184>") {
+	if (receivedMessage.author == "<@210798714585874442>" || receivedMessage.author == "<@243931167823233026>" || receivedMessage.author == "<@114082374123388935>" || receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@508767713397833748>" || receivedMessage.author == "<@277492874306781184>") {
 		if (receivedMessage.content == "!bc")
 		{
 			receivedMessage.channel.send("Black Cleaver is a garbage item on Garen.  Build Triforce instead.")

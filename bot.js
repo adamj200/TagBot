@@ -28,6 +28,7 @@ client.on("message", (receivedMessage) => {
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Dreadknight").id)
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
+				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id)
 				receivedMessage.react('✅')
 				return
 			}
@@ -241,6 +242,10 @@ var jsonData = JSON.stringify(data);
 			skin = "God King"
 			skinCount += 1
 		}
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "demacia" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "vice" + "\\b")) != -1  || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "demaciavice" + "\\b")) != -1) {
+			skin = "Demacia Vice"
+			skinCount += 1
+		}
 	}
 	
 	if (regionCount > 1 && skinCount > 1) {
@@ -287,7 +292,8 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Warring Kingdoms").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Dreadknight").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id).then(() => {
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id).then(() => {
 				setTimeout(function() {
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === skin).id)
 				}, 500);

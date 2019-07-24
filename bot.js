@@ -84,6 +84,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("Some people actually believe what I say. 4head")
 		}
+		else if (receivedMessage.content == "!xianji")
+		{
+			receivedMessage.channel.send("Fleet's good, I swear!")
+		}
 	}
 	
 	if (receivedMessage.author == "<@198893129149972480>") {

@@ -10,7 +10,12 @@ client.on("error", (err) => {
 client.on("message", (receivedMessage) => {
 	
 	if (receivedMessage.author == client.user) {
-        	return
+		if (receivedMessage.content.includes("I hear you got a problem?"))
+		{
+			receivedMessage.channel.send("Problem Solved.")
+		}
+		else
+        		return
 	}
 	
 	//console.log(receivedMessage.author.username + ": " + receivedMessage.content)
@@ -91,7 +96,6 @@ client.on("message", (receivedMessage) => {
 		else if (receivedMessage.content == "!testpred")
 		{
 			receivedMessage.channel.send("I hear you got a problem?\n\nTake this!", {files: ["Media/Predator_rune.png"]})
-			receivedMessage.channel.send("Problem Solved.")
 		}
 	}
 	

@@ -90,7 +90,7 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!testpred")
 		{
-			receivedMessage.channel.send("Media/Predator_rune.png", files)
+			receivedMessage.channel.send("Media/Predator_rune.png", "files")
 		}
 	}
 	

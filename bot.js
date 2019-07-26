@@ -95,7 +95,19 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!problem")
 		{
-			receivedMessage.channel.send("I hear you got a problem?\n\nTake this!", {files: ["Media/Predator_rune.png"]})
+			receivedMessage.channel.send("I hear you got a problem?\n\nTake this!", {files: ["Media/Predator_Rune.png"]})
+		}
+		else if (receivedMessage.content == "!infinityedge")
+		{
+			receivedMessage.channel.send({files: ["Media/Garen_Infinity_Edge.png"]})
+		}
+		else if (receivedMessage.content == "!garenproblem")
+		{
+			receivedMessage.channel.send({files: ["Media/Garen_Problem.png"]})
+		}
+		else if (receivedMessage.content == "!proudhepta")
+		{
+			receivedMessage.channel.send({files: ["Media/Proud_Hepta.png"]})
 		}
 	}
 	

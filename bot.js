@@ -67,7 +67,7 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!memerune")
 		{
-			receivedMessage.channel.send("Only low elo Garen scrubs use Predator.")
+			receivedMessage.channel.send("Only low elo Garen scrubs don't use Predator.")
 		}
 		else if (receivedMessage.content == "!recurve")
 		{
@@ -93,7 +93,7 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("Fleet's good, I swear!")
 		}
-		else if (receivedMessage.content == "!testpred")
+		else if (receivedMessage.content == "!problem")
 		{
 			receivedMessage.channel.send("I hear you got a problem?\n\nTake this!", {files: ["Media/Predator_rune.png"]})
 		}

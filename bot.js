@@ -90,8 +90,8 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!testpred")
 		{
-			receivedMessage.channel.send("I hear you got a problem?\n\nTake this!", {files: ["Media/Predator_rune.png"]}, "test")
-			receivedMessage.channel.send({files: ["Media/Problem_solved.ogg"]})
+			receivedMessage.channel.send("I hear you got a problem?\n\nTake this!", {files: ["Media/Predator_rune.png"]})
+			receivedMessage.channel.send("Problem Solved.")
 		}
 	}
 	

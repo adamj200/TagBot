@@ -88,6 +88,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("Fleet's good, I swear!")
 		}
+		else if (receivedMessage.content == "!testpred")
+		{
+			receivedMessage.channel.sendFile("Media\Predator_rune.png")
+		}
 	}
 	
 	if (receivedMessage.author == "<@198893129149972480>") {

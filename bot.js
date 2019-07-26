@@ -12,7 +12,7 @@ client.on("message", (receivedMessage) => {
 	if (receivedMessage.author == client.user) {
 		if (receivedMessage.content.includes("I hear you got a problem?"))
 		{
-			receivedMessage.channel.send("Problem Solved.")
+			receivedMessage.channel.send("Problem solved.")
 		}
 		else
         		return

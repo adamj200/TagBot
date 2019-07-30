@@ -109,6 +109,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send({files: ["Media/Proud_Hepta.png"]})
 		}
+		else if (receivedMessage.content == "!noob")
+		{
+			receivedMessage.channel.send({files: ["Media/Noob.png"]})
+		}
 	}
 	
 	if (receivedMessage.author == "<@198893129149972480>") {

@@ -113,6 +113,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send({files: ["Media/Noob.png"]})
 		}
+		else if (receivedMessage.content == "!4head")
+		{
+			receivedMessage.channel.send({files: ["Media/4head.png"]})
+		}
 	}
 	
 	if (receivedMessage.author == "<@198893129149972480>") {

@@ -179,10 +179,7 @@ var jsonData = JSON.stringify(data);
 		return
 	}
 	
-	if (receivedMessage.channel.id == 268510171125252096 || receivedMessage.channel.id == 368816534744858637) {
-		
-	}
-	else
+	if (receivedMessage.channel.id != 268510171125252096)
 	{
 		return
 	}

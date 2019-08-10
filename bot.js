@@ -307,7 +307,7 @@ var jsonData = JSON.stringify(data);
 			skin = "Noble Chroma"
 			skinCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "god" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "king" + "\\b")) != -1  || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "godking" + "\\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\b" + "god" + "\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\b" + "king" + "\b")) != -1  || receivedMessage.content.toLowerCase().search(new RegExp("\b" + "godking" + "\b")) != -1) {
 			skin = "God King"
 			skinCount += 1
 		}

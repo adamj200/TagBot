@@ -307,7 +307,7 @@ var jsonData = JSON.stringify(data);
 			skin = "Noble Chroma"
 			skinCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\b" + "god" + "\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\b" + "king" + "\b")) != -1  || receivedMessage.content.toLowerCase().search(new RegExp("\b" + "godking" + "\b")) != -1) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "god" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "king" + "\\b")) != -1  || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "godking" + "\\b")) != -1) {
 			skin = "God King"
 			skinCount += 1
 		}
@@ -363,9 +363,56 @@ var jsonData = JSON.stringify(data);
 			})
 		}
 	}
-
+	else if (regionCount == 1) {
+		if (receivedMessage.member != null) {
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "EUW").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "NA").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "KR").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "OCE").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "EUNE").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAN").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "PT").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "JPN").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "TR").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "BR").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAS").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "SEA").id).then(() => {
+				setTimeout(function() {
+					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
+					receivedMessage.react('🤔')
+				}, 500);
+			})
+		}
+	}
+	else if (skinCount == 1) {
+		if (receivedMessage.member != null) {
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Steel Legion").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Rogue Admiral").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Sanguine").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Commando").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Desert Trooper").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Warring Kingdoms").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Dreadknight").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id).then(() => {
+				setTimeout(function() {
+					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === skin).id)
+					receivedMessage.react(':eyes:')
+				}, 500);
+			})
+		}
+	}
 	
-			
+	if (receivedMessage.content.includes(client.user.toString())) {
+		if (regionCount == 1 || skinCount == 1) {
+			//receivedMessage.react('✅')
+		}
+		else {
+			//receivedMessage.react('🤔')
+		}
+	}			
 })
 
 function clean(channel, user, limit = 100) {

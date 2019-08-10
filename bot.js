@@ -15,7 +15,7 @@ client.on("message", (receivedMessage) => {
 			receivedMessage.channel.send("Problem solved.")
 		}
 		else
-        		return
+        		//return
 	}
 	
 	//console.log(receivedMessage.author.username + ": " + receivedMessage.content)

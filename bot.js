@@ -216,12 +216,12 @@ var jsonData = JSON.stringify(data);
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id)
-				return
+				//return
 			}
 		}
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "help" + "\\b")) != -1) {
 			receivedMessage.channel.send(receivedMessage.author + " @me with your region/skin to be tagged.  You can only have one region and one skin tag.\nE.g. @Tagbot euw\n@Tagbot remove to clear tags.")
-			return
+			//return
 		}
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "euw" + "\\b")) != -1) {
 			region = "EUW"

@@ -16,7 +16,7 @@ client.on("message", (receivedMessage) => {
 		}
 		else
 		{
-        		//return
+        		return
 		}
 	}
 	
@@ -37,7 +37,7 @@ client.on("message", (receivedMessage) => {
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id)
 				receivedMessage.react('✅')
-				//return
+				return
 			}
 		}
 	}
@@ -176,7 +176,7 @@ var jsonData = JSON.stringify(data);
 			client.channels.get("511910642995953664").send("<@244234418007441408>" + " refresh " + receivedMessage.author)
 			client.channels.get("511910642995953664").send("<@244234418007441408>" + " profile " + receivedMessage.author)
 		}
-		//return
+		return
 	}
 	
 	if (receivedMessage.channel.id == 268510171125252096 || receivedMessage.channel.id == 368816534744858637) {
@@ -218,12 +218,12 @@ var jsonData = JSON.stringify(data);
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id)
-				//return
+				return
 			}
 		}
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "help" + "\\b")) != -1) {
-			receivedMessage.channel.send(receivedMessage.author + " @me with your region/skin to be tagged.  You can only have one region and one skin tag.\nE.g. @Tagbot euw\n@Tagbot remove to clear tags.")
-			//return
+			receivedMessage.channel.send(receivedMessage.author + " @me with your region/skin to be tagged.  You can only have one region tag and one skin tag.\nE.g. @Tagbot euw god king\n@Tagbot remove to clear tags.")
+			return
 		}
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "euw" + "\\b")) != -1) {
 			region = "EUW"
@@ -321,15 +321,15 @@ var jsonData = JSON.stringify(data);
 	
 	if (regionCount > 1 && skinCount > 1) {
 		receivedMessage.channel.send(receivedMessage.author + " You may only have 1 region tag and 1 skin tag.")
-		//return
+		return
 	}
 	else if (regionCount > 1) {
 		receivedMessage.channel.send(receivedMessage.author + " You may only have 1 region tag.")
-		//return
+		return
 	}
 	else if (skinCount > 1) {
 		receivedMessage.channel.send(receivedMessage.author + " You may only have 1 skin tag.")
-		//return
+		return
 	}
 	
 	if (regionCount == 1 && skinCount == 1) {
@@ -356,8 +356,6 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Dreadknight").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
-			receivedMessage.react('🤔')
-			console.log(regionCount + "  " + skinCount + "  " + skin + "  " + region)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id).then(() => {
 				setTimeout(function() {
 					receivedMessage.react('✅')
@@ -383,7 +381,6 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "SEA").id).then(() => {
 				setTimeout(function() {
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
-					//receivedMessage.react('🤔')
 				}, 500);
 			})
 		}
@@ -403,7 +400,6 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id).then(() => {
 				setTimeout(function() {
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === skin).id)
-					//receivedMessage.react('🌞')
 				}, 500);
 			})
 		}
@@ -411,10 +407,10 @@ var jsonData = JSON.stringify(data);
 	
 	if (receivedMessage.content.includes(client.user.toString())) {
 		if (regionCount == 1 || skinCount == 1) {
-			//receivedMessage.react('✅')
+			receivedMessage.react('✅')
 		}
 		else {
-			//receivedMessage.react('🤔')
+			receivedMessage.react('🤔')
 		}
 	}			
 })

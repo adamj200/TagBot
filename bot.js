@@ -330,7 +330,7 @@ var jsonData = JSON.stringify(data);
 		return
 	}
 	
-	if (regionCount == 1 && skinCount == 1) {
+	if (regionCount == 1) {
 		if (receivedMessage.member != null) {
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "EUW").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "NA").id)
@@ -343,18 +343,7 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "TR").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "BR").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAS").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "SEA").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Steel Legion").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Rogue Admiral").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Sanguine").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Commando").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Desert Trooper").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Warring Kingdoms").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Dreadknight").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").then(() => {
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "SEA").id).then(() => {
 				setTimeout(function() {
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
 				}, 500);

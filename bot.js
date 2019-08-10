@@ -316,7 +316,7 @@ var jsonData = JSON.stringify(data);
 			skinCount += 1
 		}
 	}
-	console.log(regionCount + "  " + skinCount)
+	console.log(regionCount + "  " + skinCount "  " + skin + "   " + region)
 	if (regionCount > 1 && skinCount > 1) {
 		receivedMessage.channel.send(receivedMessage.author + " You may only have 1 region tag and 1 skin tag.")
 		return

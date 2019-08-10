@@ -216,12 +216,12 @@ var jsonData = JSON.stringify(data);
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id)
-				//return
+				return
 			}
 		}
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "help" + "\\b")) != -1) {
 			receivedMessage.channel.send(receivedMessage.author + " @me with your region/skin to be tagged.  You can only have one region and one skin tag.\nE.g. @Tagbot euw\n@Tagbot remove to clear tags.")
-			//return
+			return
 		}
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "euw" + "\\b")) != -1) {
 			region = "EUW"
@@ -316,7 +316,7 @@ var jsonData = JSON.stringify(data);
 			skinCount += 1
 		}
 	}
-	console.log(regionCount + "  " + skinCount + "  " + skin + "   " + region)
+	console.log(regionCount + "  " + skinCount + "  " + skin + "  " + region)
 	if (regionCount > 1 && skinCount > 1) {
 		receivedMessage.channel.send(receivedMessage.author + " You may only have 1 region tag and 1 skin tag.")
 		return
@@ -332,7 +332,6 @@ var jsonData = JSON.stringify(data);
 	
 	if (regionCount == 1 && skinCount == 1) {
 		if (receivedMessage.member != null) {
-			receivedMessage.react('✅')
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "EUW").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "NA").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "KR").id)
@@ -357,6 +356,7 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id).then(() => {
 				setTimeout(function() {
+					receivedMessage.react('✅')
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === skin).id)
 				}, 500);

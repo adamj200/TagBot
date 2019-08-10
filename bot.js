@@ -37,7 +37,7 @@ client.on("message", (receivedMessage) => {
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id)
 				receivedMessage.react('✅')
-				return
+				//return
 			}
 		}
 	}
@@ -176,7 +176,7 @@ var jsonData = JSON.stringify(data);
 			client.channels.get("511910642995953664").send("<@244234418007441408>" + " refresh " + receivedMessage.author)
 			client.channels.get("511910642995953664").send("<@244234418007441408>" + " profile " + receivedMessage.author)
 		}
-		return
+		//return
 	}
 	
 	if (receivedMessage.channel.id == 268510171125252096 || receivedMessage.channel.id == 368816534744858637) {

@@ -332,6 +332,7 @@ var jsonData = JSON.stringify(data);
 	
 	if (regionCount == 1 && skinCount == 1) {
 		if (receivedMessage.member != null) {
+			receivedMessage.react('✅')
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "EUW").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "NA").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "KR").id)
@@ -358,7 +359,6 @@ var jsonData = JSON.stringify(data);
 				setTimeout(function() {
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === skin).id)
-					receivedMessage.react('✅')
 				}, 500);
 			})
 		}

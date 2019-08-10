@@ -321,15 +321,15 @@ var jsonData = JSON.stringify(data);
 	
 	if (regionCount > 1 && skinCount > 1) {
 		receivedMessage.channel.send(receivedMessage.author + " You may only have 1 region tag and 1 skin tag.")
-		return
+		//return
 	}
 	else if (regionCount > 1) {
 		receivedMessage.channel.send(receivedMessage.author + " You may only have 1 region tag.")
-		return
+		//return
 	}
 	else if (skinCount > 1) {
 		receivedMessage.channel.send(receivedMessage.author + " You may only have 1 skin tag.")
-		return
+		//return
 	}
 	
 	if (regionCount == 1 && skinCount == 1) {
@@ -383,7 +383,7 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "SEA").id).then(() => {
 				setTimeout(function() {
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
-					receivedMessage.react('🤔')
+					//receivedMessage.react('🤔')
 				}, 500);
 			})
 		}
@@ -403,7 +403,7 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id).then(() => {
 				setTimeout(function() {
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === skin).id)
-					receivedMessage.react('🌞')
+					//receivedMessage.react('🌞')
 				}, 500);
 			})
 		}

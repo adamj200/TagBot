@@ -358,20 +358,14 @@ var jsonData = JSON.stringify(data);
 				setTimeout(function() {
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === skin).id)
+					receivedMessage.react('✅')
 				}, 500);
 			})
 		}
 	}
 
 	
-	if (receivedMessage.content.includes(client.user.toString())) {
-		if (regionCount == 1 || skinCount == 1) {
-			receivedMessage.react('✅')
-		}
-		else {
-			receivedMessage.react('🤔')
-		}
-	}			
+			
 })
 
 function clean(channel, user, limit = 100) {

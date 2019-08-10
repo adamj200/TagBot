@@ -177,7 +177,7 @@ var jsonData = JSON.stringify(data);
 		return
 	}
 	
-	if (receivedMessage.channel.id != 268510171125252096) {
+	if (receivedMessage.channel.id != 268510171125252096 || receivedMessage.channel.id != 569310741711290370) {
 		return
 	}
 	
@@ -344,7 +344,7 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "SEA").id).then(() => {
 				setTimeout(function() {
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
-				}, 1000);
+				}, 500);
 			})
 		}
 	}
@@ -363,7 +363,7 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id).then(() => {
 				setTimeout(function() {
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === skin).id)
-				}, 1000);
+				}, 500);
 			})
 		}
 	}

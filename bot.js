@@ -215,6 +215,7 @@ var jsonData = JSON.stringify(data);
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Noble Chroma").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "God King").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Demacia Vice").id)
+				receivedMessage.react('✅')
 				return
 			}
 		}

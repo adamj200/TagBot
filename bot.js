@@ -181,7 +181,7 @@ var jsonData = JSON.stringify(data);
 	
 	if (receivedMessage.channel.id != 268510171125252096)
 	{
-		return
+		//return
 	}
 	
 	var region

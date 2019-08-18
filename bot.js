@@ -179,9 +179,13 @@ var jsonData = JSON.stringify(data);
 		return
 	}
 	
-	if (receivedMessage.channel.id != 268510171125252096)
+	if (receivedMessage.channel.id == 268510171125252096 || receivedMessage.channel.id == 569310741711290370)
 	{
-		//return
+		
+	}
+	else
+	{
+		return
 	}
 	
 	var region

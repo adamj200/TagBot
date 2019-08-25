@@ -119,6 +119,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send({files: ["Media/4head.png"]})
 		}
+		else if (receivedMessage.content == "!super4head")
+		{
+			receivedMessage.channel.send({files: ["Media/super4head.png"]})
+		}
 	}
 	
 	if (receivedMessage.author == "<>") {

@@ -22,6 +22,14 @@ client.on("message", (receivedMessage) => {
 	
 	//console.log(receivedMessage.author.username + ": " + receivedMessage.content)
 	
+	if (receivedMessage.author == "<@198893129149972480>") {
+		if (receivedMessage.content.includes(client.user.toString())) {
+			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "assignall" + "\\b")) != -1) {
+				
+			}
+		}
+	}
+	
 	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@277492874306781184>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@182727259054931969>" || receivedMessage.author == "<@243931167823233026>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "daddy" + "\\b")) != -1) {

@@ -131,6 +131,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send({files: ["Media/super4head.png"]})
 		}
+		else if (receivedMessage.content == "!learn2w")
+		{
+			receivedMessage.channel.send({files: ["Media/learn2w.png"]})
+		}
 	}
 	
 	if (receivedMessage.author == "<>") {

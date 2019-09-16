@@ -58,6 +58,7 @@ client.on("message", (receivedMessage) => {
 			receivedMessage.channel.send({files: ["Media/anime_pink.png"]})
 			receivedMessage.channel.send({files: ["Media/anime_red.png"]})
 			receivedMessage.channel.send({files: ["Media/anime_yellow.png"]})
+			receivedMessage.channel.send({files: ["Media/anime_orange.png"]})
 		}
 	}
 	

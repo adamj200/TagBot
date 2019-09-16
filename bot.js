@@ -50,6 +50,16 @@ client.on("message", (receivedMessage) => {
 		}
 	}
 	
+	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@182727259054931969>" || receivedMessage.author == "<@243931167823233026>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@176397094049808384>" || receivedMessage.author == "<@348142087805468693>") {
+		if (receivedMessage.content == "!anime")
+		{
+			receivedMessage.channel.send({files: ["Media/anime_blue.png"]})
+			receivedMessage.channel.send({files: ["Media/anime_green.png"]})
+			receivedMessage.channel.send({files: ["Media/anime_pink.png"]})
+			receivedMessage.channel.send({files: ["Media/anime_red.png"]})
+			receivedMessage.channel.send({files: ["Media/anime_yellow.png"]})
+		}
+	
 	if (receivedMessage.author == "<@197789269333508096>" || receivedMessage.author == "<@176397094049808384>" || receivedMessage.author == "<@184265057532772353>" || receivedMessage.author == "<@210798714585874442>" || receivedMessage.author == "<@243931167823233026>" || receivedMessage.author == "<@114082374123388935>" || receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@508767713397833748>" || receivedMessage.author == "<@277492874306781184>") {
 		if (receivedMessage.content == "!bc")
 		{

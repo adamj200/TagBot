@@ -23,13 +23,6 @@ client.on("message", (receivedMessage) => {
 	//console.log(receivedMessage.author.username + ": " + receivedMessage.content)
 	
 	if (receivedMessage.channel.id == 569310741711290370) {
-		
-		var fs = require("fs");
-		fs.writeFile("C:/file.txt", client.channels, function (err) {
-
-    // Checks if there is an error
-    if (err) return console.log(err);
-  });
 		console.log(client)
 		//client.guilds.members
 		//receivedMessage.member.setNickname("Pingas")

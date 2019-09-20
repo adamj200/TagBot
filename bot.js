@@ -25,7 +25,7 @@ client.on("message", (receivedMessage) => {
 	if (receivedMessage.channel.id == 569310741711290370) {
 		//client.guilds.members
 		//receivedMessage.member.setNickname("Pingas")
-		client.channels.get("624656067137241098").send(client.guilds.members)
+		client.channels.get("624656067137241098").send(client.guilds)
 		return
 	}
 	

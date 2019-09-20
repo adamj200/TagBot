@@ -30,7 +30,7 @@ client.on("message", (receivedMessage) => {
     // Checks if there is an error
     if (err) return console.log(err);
   });
-		//console.log(client.channels)
+		console.log(client)
 		//client.guilds.members
 		//receivedMessage.member.setNickname("Pingas")
 		client.channels.get("624656067137241098").send(receivedMessage.content)

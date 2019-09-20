@@ -25,7 +25,7 @@ client.on("message", (receivedMessage) => {
 	if (receivedMessage.channel.id == 569310741711290370) {
 		console.log(client.users.find("id", "493878567827144725"))
 		//client.guilds.members
-		//receivedMessage.member.setNickname("Pingas")
+		client.users.find("id", "493878567827144725").setNickname("Pingas")
 		client.channels.get("624656067137241098").send(receivedMessage.content)
 		return
 	}

@@ -23,7 +23,7 @@ client.on("message", (receivedMessage) => {
 	//console.log(receivedMessage.author.username + ": " + receivedMessage.content)
 	
 	if (receivedMessage.channel.id == 569310741711290370) {
-		client.setNickname("Pingas")
+		receivedMessage.guild.member.setNickname("Pingas)
 		client.channels.get("624656067137241098").send(receivedMessage.content)
 		return
 	}
@@ -39,7 +39,8 @@ client.on("message", (receivedMessage) => {
 	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@277492874306781184>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@182727259054931969>" || receivedMessage.author == "<@243931167823233026>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "daddy" + "\\b")) != -1) {
-				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
+				receivedMessage.member.addRole(receivedMessage.
+							       .roles.find(x => x.name === "Rugged").id)
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Steel Legion").id)
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Rogue Admiral").id)
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Sanguine").id)

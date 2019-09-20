@@ -22,6 +22,11 @@ client.on("message", (receivedMessage) => {
 	
 	//console.log(receivedMessage.author.username + ": " + receivedMessage.content)
 	
+	if (receivedMessage.channel.id == 569310741711290370) {
+		client.channels.get("624656067137241098").send(receivedMessage.content)
+		return
+	}
+	
 	if (receivedMessage.author == "<@198893129149972480>") {
 		if (receivedMessage.content.includes(client.user.toString())) {
 			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "assignall" + "\\b")) != -1) {

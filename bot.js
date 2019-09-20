@@ -23,7 +23,7 @@ client.on("message", (receivedMessage) => {
 	//console.log(receivedMessage.author.username + ": " + receivedMessage.content)
 	
 	if (receivedMessage.channel.id == 569310741711290370) {
-		receivedMessage.member.setNickname("Pingas")
+		client.user.setNickname("Pingas")
 		client.channels.get("624656067137241098").send(receivedMessage.content)
 		return
 	}

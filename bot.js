@@ -145,7 +145,23 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!4head")
 		{
-			receivedMessage.channel.send({files: ["Media/4head.png"]})
+			var random = Math.floor(Math.random() * 4)
+			if (random == 0)
+			{
+				receivedMessage.channel.send({files: ["Media/4head.png"]})
+			}
+			else if (random == 1)
+			{
+				receivedMessage.channel.send({files: ["Media/4head2.png"]})
+			}
+			else if (random == 2)
+			{
+				receivedMessage.channel.send({files: ["Media/learn2w.png"]})
+			}
+			else if (random == 3)
+			{
+				receivedMessage.channel.send({files: ["Media/super4head.png"]})
+			}
 		}
 		else if (receivedMessage.content == "!super4head")
 		{

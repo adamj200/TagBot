@@ -159,6 +159,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send({files: ["Media/guaren.png"]})
 		}
+		else if (receivedMessage.content == "!daren")
+		{
+			receivedMessage.channel.send({files: ["Media/gg.jpg"]})
+		}
 	}
 	
 	if (receivedMessage.author == "<>") {

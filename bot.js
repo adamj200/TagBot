@@ -147,10 +147,10 @@ client.on("message", (receivedMessage) => {
 		else if (receivedMessage.content == "!4head")
 		{
 			var random2 = random
-			random = Math.floor(Math.random() * 4)
+			random = Math.floor(Math.random() * 5)
 			while (random == random2)
 			{
-  				random = Math.floor(Math.random() * 4)
+  				random = Math.floor(Math.random() * 5)
 			}
 			if (random == 0)
 			{
@@ -167,6 +167,10 @@ client.on("message", (receivedMessage) => {
 			else if (random == 3)
 			{
 				receivedMessage.channel.send({files: ["Media/super4head.png"]})
+			}
+			else if (random == 4)
+			{
+				receivedMessage.channel.send({files: ["Media/draven.png"]})
 			}
 		}
 		else if (receivedMessage.content == "!super4head")

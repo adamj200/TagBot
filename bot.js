@@ -2,6 +2,7 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 
 var auth = require('./auth.json');
+var random;
 
 client.on("error", (err) => {
 	console.error("An error occurred. The error was: " + err)
@@ -145,7 +146,12 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!4head")
 		{
-			var random = Math.floor(Math.random() * 4)
+			var random2 = random
+			random = Math.floor(Math.random() * 4)
+			while (random == random2)
+			{
+  				random = Math.floor(Math.random() * 4)
+			}
 			if (random == 0)
 			{
 				receivedMessage.channel.send({files: ["Media/4head.png"]})

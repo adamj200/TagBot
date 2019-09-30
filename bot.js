@@ -144,6 +144,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send({files: ["Media/riot.jpg"]})
 		}
+		else if (receivedMessage.content == "!probtw")
+		{
+			receivedMessage.channel.send({files: ["Media/probtw.mp4"]})
+		}
 		else if (receivedMessage.content == "!noob")
 		{
 			receivedMessage.channel.send({files: ["Media/Noob.png"]})

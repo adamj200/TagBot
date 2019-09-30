@@ -104,6 +104,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("Black Cleaver into Recurve Bow is currently Garens best build.  Everything else is inferior to this item combo.")
 		}
+		else if (receivedMessage.content == "!darius")
+		{
+			receivedMessage.channel.send("Darius is actually the most overpowered champion in the entire game. -Abubs")
+		}
 		else if (receivedMessage.content == "!dariusmatchup")
 		{
 			receivedMessage.channel.send("Garen vs Darius is 100% a skill matchup. Only in Bronze is Darius slightly favoured.")

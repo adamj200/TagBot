@@ -142,7 +142,7 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!riot")
 		{
-			receivedMessage.channel.send({files: ["Media/riot.png"]})
+			receivedMessage.channel.send({files: ["Media/riot.jpg"]})
 		}
 		else if (receivedMessage.content == "!noob")
 		{

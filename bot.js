@@ -128,6 +128,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send("Fleet's good, I swear!")
 		}
+		else if (receivedMessage.content == "!supertroll")
+		{
+			receivedMessage.channel.send("https://www.reddit.com/r/GarenMains/comments/dbhe7p/changes_on_pbe_my_amigos/f24uiof/")
+		}
 		else if (receivedMessage.content == "!problem")
 		{
 			receivedMessage.channel.send("I hear you got a problem?\n\nTake this!", {files: ["Media/Predator_Rune.png"]})

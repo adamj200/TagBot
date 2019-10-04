@@ -17,7 +17,7 @@ client.on("message", (receivedMessage) => {
 		}
 		else
 		{
-        		//return
+        		return
 		}
 	}
 	

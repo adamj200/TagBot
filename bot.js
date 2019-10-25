@@ -172,6 +172,10 @@ client.on("message", (receivedMessage) => {
 		{
 			receivedMessage.channel.send({files: ["Media/Noob.png"]})
 		}
+		else if (receivedMessage.content == "!gasuo")
+		{
+			receivedMessage.channel.send({files: ["Media/gasuo.jpg"]})
+		}
 		else if (receivedMessage.content == "!4head")
 		{
 			var random2 = random

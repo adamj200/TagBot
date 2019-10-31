@@ -306,6 +306,7 @@ var jsonData = JSON.stringify(data);
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "BR").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAS").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "SEA").id)
+				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "RU").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Steel Legion").id)
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Rogue Admiral").id)
@@ -371,6 +372,10 @@ var jsonData = JSON.stringify(data);
 		}
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "sea" + "\\b")) != -1) {
 			region = "SEA"
+			regionCount += 1
+		}
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "ru" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "russia" + "\\b")) != -1)) {
+			region = "RU"
 			regionCount += 1
 		}
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "rugged" + "\\b")) != -1) {
@@ -446,6 +451,7 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "BR").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAS").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "SEA").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "RU").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Steel Legion").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "Rogue Admiral").id)
@@ -478,7 +484,8 @@ var jsonData = JSON.stringify(data);
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "TR").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "BR").id)
 			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "LAS").id)
-			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "SEA").id).then(() => {
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "SEA").id)
+			receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "RU").id).then(() => {
 				setTimeout(function() {
 					receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === region).id)
 				}, 500);

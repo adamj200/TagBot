@@ -374,7 +374,7 @@ var jsonData = JSON.stringify(data);
 			region = "SEA"
 			regionCount += 1
 		}
-		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "ru" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "russia" + "\\b")) != -1)) {
+		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "ru" + "\\b")) != -1 || receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "russia" + "\\b")) != -1) {
 			region = "RU"
 			regionCount += 1
 		}

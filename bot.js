@@ -154,7 +154,7 @@ client.on("message", (receivedMessage) => {
 		}
 		else if (receivedMessage.content == "!garenproblem")
 		{
-			receivedMessage.channel.send({files: ["Media/Garen_Problem.png"]})
+			receivedMessage.channel.send({files: ["Media/Garen_Problem.jpg"]})
 		}
 		else if (receivedMessage.content == "!proudhepta")
 		{

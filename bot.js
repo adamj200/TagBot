@@ -17,11 +17,11 @@ client.on("message", (receivedMessage) => {
 		}
 		else
 		{
-        		return
+			return
 		}
 	}
 	
-	//console.log(receivedMessage.author.username + ": " + receivedMessage.content)
+	//console.log(receivedMessage.author + ": " + receivedMessage.content)
 	
 	//if (receivedMessage.channel.id == 569310741711290370) {
 		//console.log(receivedMessage.member)
@@ -32,7 +32,7 @@ client.on("message", (receivedMessage) => {
 	//}
 	
 	if (receivedMessage.author == "<@198893129149972480>") {
-		if (receivedMessage.content.includes(client.user.toString())) {
+		if (receivedMessage.content.includes(client.user.id)) {
 			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "assignall" + "\\b")) != -1) {
 				
 			}
@@ -40,7 +40,7 @@ client.on("message", (receivedMessage) => {
 	}
 	
 	if (receivedMessage.author == "<@198893129149972480>" || receivedMessage.author == "<@277492874306781184>" || receivedMessage.author == "<@249633375407702017>" || receivedMessage.author == "<@348142087805468693>" || receivedMessage.author == "<@182727259054931969>" || receivedMessage.author == "<@243931167823233026>") {
-		if (receivedMessage.content.includes(client.user.toString())) {
+		if (receivedMessage.content.includes(client.user.id)) {
 			if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "daddy" + "\\b")) != -1) {
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Rugged").id)
 				receivedMessage.member.addRole(receivedMessage.guild.roles.find(x => x.name === "Steel Legion").id)
@@ -224,7 +224,7 @@ client.on("message", (receivedMessage) => {
 	}
 	
 	if (receivedMessage.author == "<>") {
-		if (receivedMessage.content.includes(client.user.toString())) {
+		if (receivedMessage.content.includes(client.user.id)) {
 			var words = receivedMessage.content.split(" ")
 			if (words[1] != null && words[2] != null && words[3] != null)
 			{
@@ -262,8 +262,8 @@ var jsonData = JSON.stringify(data);
 	}
 	
 	if (receivedMessage.author == "<@198893129149972480>") {
-		if (receivedMessage.content.includes(client.user.toString())) {
-			var userMessage = receivedMessage.content.toLowerCase().replace(client.user.toString(),"")
+		if (receivedMessage.content.includes(client.user.id)) {
+			var userMessage = receivedMessage.content.toLowerCase().replace(client.user.id,"")
 			if (userMessage.toLowerCase().search(new RegExp("\\b" + "demaciate" + "\\b")) != -1) {
 				var nukeUser = userMessage.substring(11)
 				clean(receivedMessage.channel, nukeUser)
@@ -291,7 +291,7 @@ var jsonData = JSON.stringify(data);
 	var skin
 	var skinCount = 0
 
-	if (receivedMessage.content.includes(client.user.toString())) {
+	if (receivedMessage.content.includes(client.user.id)) {
 		if (receivedMessage.content.toLowerCase().search(new RegExp("\\b" + "remove" + "\\b")) != -1) {
 			if (receivedMessage.member != null) {
 				receivedMessage.member.removeRole(receivedMessage.guild.roles.find(x => x.name === "EUW").id)
@@ -512,7 +512,7 @@ var jsonData = JSON.stringify(data);
 		}
 	}
 	
-	if (receivedMessage.content.includes(client.user.toString())) {
+	if (receivedMessage.content.includes(client.user.id)) {
 		if (regionCount == 1 || skinCount == 1) {
 			receivedMessage.react('✅')
 		}
